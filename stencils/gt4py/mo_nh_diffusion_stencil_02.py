@@ -22,8 +22,7 @@ def _mo_nh_diffusion_stencil_02_div(
     vn: Field[[EdgeDim, KDim], float],
     geofac_div: Field[[CellDim, C2EDim], float],
 ) -> Field[[CellDim, KDim], float]:
-    div = neighbor_sum(vn(C2E) * geofac_div, axis=C2EDim)
-    return div
+    ...
 
 
 @field_operator
@@ -32,8 +31,7 @@ def _mo_nh_diffusion_stencil_02_khc(
     e_bln_c_s: Field[[CellDim, C2EDim], float],
     diff_multfac_smag: Field[[KDim], float],
 ) -> Field[[CellDim, KDim], float]:
-    kh_c = neighbor_sum(kh_smag_ec(C2E) * e_bln_c_s, axis=C2EDim) / diff_multfac_smag
-    return kh_c
+    ...
 
 
 @program
