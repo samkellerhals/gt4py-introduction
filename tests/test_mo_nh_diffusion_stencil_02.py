@@ -13,10 +13,10 @@
 
 import numpy as np
 
-from stencils.gt4py.mo_nh_diffusion_stencil_02 import (
+from src.gt4py.mo_nh_diffusion_stencil_02 import (
     mo_nh_diffusion_stencil_02,
 )
-from dimension import C2EDim, CellDim, EdgeDim, KDim
+from src.gt4py.dimension import C2EDim, CellDim, EdgeDim, KDim
 from simple_mesh import SimpleMesh
 from utils import random_field, zero_field
 

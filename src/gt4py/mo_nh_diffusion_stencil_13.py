@@ -14,18 +14,28 @@
 from functional.ffront.decorator import field_operator, program
 from functional.ffront.fbuiltins import Field
 
-from dimension import EdgeDim, KDim
+from src.gt4py.dimension import E2C, CellDim, EdgeDim, KDim
 
 
 @field_operator
-def _mo_nh_diffusion_stencil_06(
-    z_nabla2_e: Field[[EdgeDim, KDim], float],
-    area_edge: Field[[EdgeDim], float],
-    vn: Field[[EdgeDim, KDim], float],
-    fac_bdydiff_v: float,
+def _mo_nh_diffusion_stencil_13(
+    kh_smag_e: Field[[EdgeDim, KDim], float],
+    inv_dual_edge_length: Field[[EdgeDim], float],
+    theta_v: Field[[CellDim, KDim], float],
 ) -> Field[[EdgeDim, KDim], float]:
     ...
-<<<<<<< HEAD
-=======
 
->>>>>>> 9f1e4d220ae9e9aa39c48c67212c5a757a0b93bc
+
+@program
+def mo_nh_diffusion_stencil_13(
+    kh_smag_e: Field[[EdgeDim, KDim], float],
+    inv_dual_edge_length: Field[[EdgeDim], float],
+    theta_v: Field[[CellDim, KDim], float],
+    z_nabla2_e: Field[[EdgeDim, KDim], float],
+):
+    _mo_nh_diffusion_stencil_13(
+        kh_smag_e,
+        inv_dual_edge_length,
+        theta_v,
+        out=z_nabla2_e,
+    )
