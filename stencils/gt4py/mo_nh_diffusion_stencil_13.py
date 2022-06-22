@@ -14,7 +14,7 @@
 from functional.ffront.decorator import field_operator, program
 from functional.ffront.fbuiltins import Field
 
-from icon4py.common.dimension import E2C, CellDim, EdgeDim, KDim
+from dimension import E2C, CellDim, EdgeDim, KDim
 
 
 @field_operator
@@ -23,8 +23,7 @@ def _mo_nh_diffusion_stencil_13(
     inv_dual_edge_length: Field[[EdgeDim], float],
     theta_v: Field[[CellDim, KDim], float],
 ) -> Field[[EdgeDim, KDim], float]:
-    z_nabla2_e = kh_smag_e * inv_dual_edge_length * (theta_v(E2C[1]) - theta_v(E2C[0]))
-    return z_nabla2_e
+    ...
 
 
 @program

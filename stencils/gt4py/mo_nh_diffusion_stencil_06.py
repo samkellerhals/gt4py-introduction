@@ -14,7 +14,7 @@
 from functional.ffront.decorator import field_operator, program
 from functional.ffront.fbuiltins import Field
 
-from icon4py.common.dimension import EdgeDim, KDim
+from dimension import EdgeDim, KDim
 
 
 @field_operator
@@ -24,15 +24,5 @@ def _mo_nh_diffusion_stencil_06(
     vn: Field[[EdgeDim, KDim], float],
     fac_bdydiff_v: float,
 ) -> Field[[EdgeDim, KDim], float]:
-    vn = vn + (z_nabla2_e * area_edge * fac_bdydiff_v)
-    return vn
+    ...
 
-
-@program
-def mo_nh_diffusion_stencil_06(
-    z_nabla2_e: Field[[EdgeDim, KDim], float],
-    area_edge: Field[[EdgeDim], float],
-    vn: Field[[EdgeDim, KDim], float],
-    fac_bdydiff_v: float,
-):
-    _mo_nh_diffusion_stencil_06(z_nabla2_e, area_edge, vn, fac_bdydiff_v, out=vn)
