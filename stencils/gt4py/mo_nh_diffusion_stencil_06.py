@@ -14,7 +14,7 @@
 from functional.ffront.decorator import field_operator, program
 from functional.ffront.fbuiltins import Field
 
-from icon4py.common.dimension import EdgeDim, KDim
+from dimension import EdgeDim, KDim
 
 
 @field_operator
@@ -25,3 +25,7 @@ def _mo_nh_diffusion_stencil_06(
     fac_bdydiff_v: float,
 ) -> Field[[EdgeDim, KDim], float]:
     ...
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f1e4d220ae9e9aa39c48c67212c5a757a0b93bc

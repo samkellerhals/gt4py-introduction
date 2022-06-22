@@ -14,7 +14,7 @@
 from functional.ffront.decorator import field_operator, program
 from functional.ffront.fbuiltins import Field
 
-from icon4py.common.dimension import E2C, CellDim, EdgeDim, KDim
+from dimension import E2C, CellDim, EdgeDim, KDim
 
 
 @field_operator
