@@ -14,7 +14,7 @@
 from functional.ffront.decorator import field_operator, program
 from functional.ffront.fbuiltins import Field, neighbor_sum
 
-from dimension import C2E, C2EDim, CellDim, EdgeDim, KDim
+from src.gt4py.dimension import C2E, C2EDim, CellDim, EdgeDim, KDim
 
 
 @field_operator

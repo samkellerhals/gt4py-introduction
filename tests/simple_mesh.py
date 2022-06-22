@@ -16,7 +16,7 @@ from dataclasses import dataclass
 import numpy as np
 from functional.iterator.embedded import NeighborTableOffsetProvider
 
-from dimension import (
+from src.gt4py.dimension import (
     C2E2CODim,
     C2E2CDim,
     C2EDim,
